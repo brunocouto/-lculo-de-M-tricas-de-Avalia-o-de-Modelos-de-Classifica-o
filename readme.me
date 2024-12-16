@@ -1,0 +1,117 @@
+Cálculo de Métricas de Avaliação de Modelos de Classificação
+
+Introdução
+
+Este projeto implementa um código em Python para calcular as principais métricas de avaliação de modelos de classificação: Acurácia, Precisão, Sensibilidade (Recall), Especificidade e F-Score. Essas métricas são calculadas com base em uma matriz de confusão fornecida pelo usuário.
+
+Requisitos
+
+Este código foi desenvolvido em Python puro e não requer bibliotecas externas. Certifique-se de ter o Python instalado na sua máquina.
+
+Versão recomendada:
+
+Python 3.6 ou superior
+
+Estrutura do Projeto
+
+O projeto contém dois arquivos principais:
+
+classification_metrics.py: Contém o código-fonte para calcular as métricas de classificação.
+
+README.md: Arquivo de documentação que explica o funcionamento do código e como utilizá-lo.
+
+Como Usar
+
+1. Configure os parâmetros da matriz de confusão
+
+Abra o arquivo classification_metrics.py no seu editor de código preferido e defina os valores dos parâmetros da matriz de confusão:
+
+VP, VN, FP, FN = 50, 35, 5, 10
+
+Esses valores podem ser ajustados conforme sua necessidade.
+
+2. Execute o código
+
+Execute o arquivo Python para calcular as métricas. No terminal, rode o seguinte comando:
+
+python classification_metrics.py
+
+3. Veja os resultados
+
+O programa exibirá no terminal as métricas calculadas, como neste exemplo:
+
+Resultados das Métricas de Avaliação:
+Acurácia: 0.89
+Precisão: 0.91
+Sensibilidade: 0.83
+Especificidade: 0.88
+F-Score: 0.87
+
+Explicação das Métricas
+
+1. Acurácia (Accuracy)
+
+Mede a proporção de predições corretas entre todas as predições realizadas:
+
+Acurácia = (VP + VN) / (VP + VN + FP + FN)
+
+2. Precisão (Precision)
+
+Mede a proporção de exemplos classificados como positivos que são realmente positivos:
+
+Precisão = VP / (VP + FP)
+
+3. Sensibilidade (Recall ou Sensitivity)
+
+Também chamada de Recall, mede a capacidade do modelo de identificar corretamente os exemplos positivos:
+
+Sensibilidade = VP / (VP + FN)
+
+4. Especificidade (Specificity)
+
+Mede a capacidade do modelo de identificar corretamente os exemplos negativos:
+
+Especificidade = VN / (VN + FP)
+
+5. F-Score
+
+O F-Score é a média harmônica entre Precisão e Sensibilidade. Ele é útil quando existe um desequilíbrio entre as classes:
+
+F-Score = 2 * (Precisão * Sensibilidade) / (Precisão + Sensibilidade)
+
+Exemplo de Matriz de Confusão
+
+Para a matriz de confusão abaixo:
+
+
+
+Predição Positiva
+
+Predição Negativa
+
+Classe Positiva
+
+VP = 50
+
+FN = 10
+
+Classe Negativa
+
+FP = 5
+
+VN = 35
+
+O código retornará as seguintes métricas:
+
+Acurácia: 0.89
+Precisão: 0.91
+Sensibilidade: 0.83
+Especificidade: 0.88
+F-Score: 0.87
+
+Considerações Finais
+
+Este projeto foi desenvolvido para facilitar o cálculo das métricas fundamentais de avaliação de modelos de classificação. Ele pode ser utilizado para fins didáticos ou como base para aplicações práticas.
+
+Caso tenha dúvidas ou sugestões, fique à vontade para modificar ou expandir o código conforme necessário.
+
